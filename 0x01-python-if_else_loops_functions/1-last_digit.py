@@ -4,7 +4,7 @@ number = random.randint(-10000, 10000)
 str1 = "Last digit of"
 str2 = "is"
 str3 = "and is greater than 5"
-str4= "less than 6 and not 0"
+str4 = "and is less than 6 and not 0"
 str5 = "and is 0"
 if number < 0:
     digit = ((-1) * number) % 10
