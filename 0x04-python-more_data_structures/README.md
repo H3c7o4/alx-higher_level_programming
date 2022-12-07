@@ -13,3 +13,5 @@
  - How to iterate over a dictionary
  - What is a lambda function
  - What are the map, reduce and filter functions
+
+This program was written as part of the curriculum for Holberton School. Holberton School is a campus-based full-stack software engineering program that prepares students for careers in the tech industry using project-based peer learning. For more information, visit this link.
