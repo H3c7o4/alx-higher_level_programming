@@ -6,6 +6,7 @@ Class Square: Create a square class that contains a size
 
 class Square:
     """Defines a square"""
+
     def __init__(self, size=0):
         """Sets the necessary attributes for the Square object.
         Args:
