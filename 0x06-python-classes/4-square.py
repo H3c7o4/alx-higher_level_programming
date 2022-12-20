@@ -6,7 +6,7 @@ Square class: defines a square
 
 class Square:
     """class Square that defines a squaare"""
-    def __init__(self, size):
+    def __init__(self, size=0):
         """Initialize attributes"""
         self.size = size
 
@@ -15,7 +15,7 @@ class Square:
         """Return the size of the square"""
         return (self.__size)
     
-    @property.setter
+    @size.setter
     def size(self, value):
         """Sets the necessary attributes for the Square object.
         Args:
