@@ -4,10 +4,21 @@ Class Square: Create a square class that contains a size
 """
 
 class Square:
-    """ Class that defines a square with size"""
+    """Defines a square"""
+
     def __init__(self, size=0):
-        try:
+        """Sets the necessary attributes for the Square object.
+        Args:
+            size (int): the size of one edge of the square.
+        Raises:
+            TypeError: if size is not given as an integer.
+            ValueError: if size is less than 0.
+        """
+
+        if type(size) is int:
             if size >= 0:
                 self.__size = size
-        except ValueError:
-            print("size must be >= 0")
+            else:
+                raise ValueError("size must be >=0")
+        else:
+            raise TypeError("size must be an integer")
