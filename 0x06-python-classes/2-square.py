@@ -3,6 +3,7 @@
 Class Square: Create a square class that contains a size
 """
 
+
 class Square:
     """Defines a square"""
 
