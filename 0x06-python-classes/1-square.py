@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """
-Class Square: Create a square class that contains a size
+Class Square:
+
+Create a square class that contains a size
 """
 
 class Square:
