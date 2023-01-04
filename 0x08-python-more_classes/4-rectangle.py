@@ -75,3 +75,11 @@ class Rectangle:
                 string += "\n"
             string = string[:-1]
             return (string)
+
+    def __repr__(self):
+        """return a string representation of the rectangle
+        to be able to recreate a new instance by using eval()
+        """
+        wid = str(self.__width)
+        hei = str(self.__height)
+        return "Rectangle(' + wid + ', ' + hei + ')"
