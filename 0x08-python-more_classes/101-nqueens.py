@@ -1,14 +1,11 @@
 #!/usr/bin/python3
 """N Queens Module.
-
 Contains the N Queens problem solver.
 """
 import sys
 
-
 def error_exit(message="", code=1):
     """Handles exit.
-
     Args:
         message (str): the message to display on stdout.
         code (int): the exit code.
@@ -16,10 +13,8 @@ def error_exit(message="", code=1):
     print(message)
     exit(code)
 
-
 def test_pos(board, y):
     """Tests if wether a queen can be placed at the current position.
-
     Args:
         board (list): the chessboard.
         y (int): the height parameter.
@@ -30,7 +25,6 @@ def test_pos(board, y):
         if abs(board[y][1] - board[i][1]) == y - i:
             return False
     return True
-
 
 def rec_backtrack(board, y):
     """Backtrack the possibilities.
@@ -46,7 +40,6 @@ def rec_backtrack(board, y):
             board[y][1] = x
             if test_pos(board, y):
                 rec_backtrack(board, y + 1)
-
 
 if len(sys.argv) != 2:
     error_exit("Usage: nqueens N")
