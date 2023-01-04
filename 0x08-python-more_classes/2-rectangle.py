@@ -30,7 +30,7 @@ class Rectangle:
         elif (value < 0):
             raise ValueError("width must be >= 0")
         else:
-            return self.__width = value
+            self.__width = value
 
     @property
     def height(self):
@@ -51,7 +51,7 @@ class Rectangle:
         elif (value < 0):
             raise ValueError("height must be >= 0")
         else:
-            return (self.__height = value)
+            self.__height = value
 
     def area(self):
         """Retrieves the area of the Rectangle"""
