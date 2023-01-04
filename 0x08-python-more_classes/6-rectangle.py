@@ -1,15 +1,18 @@
 #!/usr/bin/python3
 """
-Class Rectangle: Defines a rectangle based on 4-rectangle.py
+Class Rectangle: Defines a rectangle based on 5-rectangle.py
 """
 
 
 class Rectangle:
     """class that defines a rectangle with his attributes"""
+
+    number_of_instances = 0
     def __init__(self, width=0, height=0):
         """Initialize attributes"""
         self.width = width
         self.height = height
+        type(self).number_of_instances += 1
 
     @property
     def width(self):
@@ -88,3 +91,4 @@ class Rectangle:
         """(destruct) Detect when an instance of Rectangle is deleted
         and print a message """
         print("Bye rectangle...")
+        type(self).number_of_instances -= 1
