@@ -15,19 +15,12 @@ def add_integer(a, b=98):
         b (int, float): the second value.
     """
     if type(a) in [int, float]:
-        try:
-            a = int(a)
-        except ValueError:
-            print('a must be an integer')
+        a = int(a)
     else:
         raise TypeError('a must be an integer')
 
     if type(b) in [int, float]:
-        try:
-            b = int(b)
-        except ValueError:
-            print('b must be an integer')
+        b = int(b)
     else:
         raise TypeError('b must be an integer')
-
     return a + b
