@@ -49,7 +49,7 @@ if len(sys.argv) != 2:
     error_exit("Usage: nqueens N")
 try:
     N = int(sys.argv[1])
-except:
+except TypeError:
     error_exit("N must be a number")
 if N < 4:
     error_exit("N must be at least 4")
