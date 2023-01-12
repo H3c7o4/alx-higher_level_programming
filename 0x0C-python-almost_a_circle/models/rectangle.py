@@ -10,18 +10,13 @@ from models.base import Base
 
 class Rectangle(Base):
     """Class that defines a rectangle"""
-    __width = 0
-    __height = 0
-    __x = 0
-    __y = 0
-
     def __init__(self, width, height, x=0, y=0, id=None):
         """Class constructor"""
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
@@ -38,7 +33,7 @@ class Rectangle(Base):
             ValueError: if width is less than 0.
         """
         if (type(value) != int):
-            raise TypeError("width must be an integer")
+            raise TypeError("width width must be an integer")
         elif (value < 0):
             raise ValueError("width must be >= 0")
         else:
@@ -80,7 +75,9 @@ class Rectangle(Base):
             ValueError: if width is less than 0.
         """
         if (type(value) != int):
-            raise TypeError("width must be an integer")
+            raise TypeError("x must be an integer")
+        elif (value < 0):
+            raise ValueError("x must be >= 0")
         else:
             self.__x = value
 
@@ -99,6 +96,8 @@ class Rectangle(Base):
             ValueError: if width is less than 0.
         """
         if (type(value) != int):
-            raise TypeError("width must be an integer")
+            raise TypeError("y must be an integer")
+        elif (value < 0):
+            raise ValueError("y must be >= 0")
         else:
             self.__y = value
