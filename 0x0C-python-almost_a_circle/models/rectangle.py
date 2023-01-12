@@ -18,6 +18,12 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def __str__(self):
+        """Overrides the default behaviour of the __str__ method."""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.x, self.y, self.width, self.height)
+
+    # width attribute getter and setter
     @property
     def width(self):
         """Retrieves the value of the width"""
@@ -39,6 +45,7 @@ class Rectangle(Base):
         else:
             self.__width = value
 
+    # height attribute getter and setter.
     @property
     def height(self):
         """Retrieves the value of the height"""
@@ -60,6 +67,7 @@ class Rectangle(Base):
         else:
             self.__height = value
 
+    # x attribute getter and setter.
     @property
     def x(self):
         """Retrieves the value of x"""
@@ -81,12 +89,13 @@ class Rectangle(Base):
         else:
             self.__x = value
 
+    # y attribute getter and setter.
     @property
     def y(self):
         """Retrieves the value of x"""
         return (self.__y)
 
-    @x.setter
+    @y.setter
     def y(self, value):
         """Sets the necessary attributes for the Rectangle object.
         Args:
@@ -102,19 +111,13 @@ class Rectangle(Base):
         else:
             self.__y = value
 
+    # Methods
     def area(self):
         """Retrieves the area of the Rectangle"""
         return (self.__width * self.__height)
 
     def display(self):
         """prints in stdout the Rectangle instance with the character #"""
-        string = ""
-        if (self.__width == 0 or self.__height == 0):
-            return (string)
-        else:
-            for i in range(self.__height):
-                for j in range(self.__width):
-                    string += "#"
-                string += "\n"
-            string = string[:-1]
-            print(string)
+        print('\n' * self.y, end='')
+        for height in range(self.height):
+            print(' ' * self.x + '#' * self.width)
