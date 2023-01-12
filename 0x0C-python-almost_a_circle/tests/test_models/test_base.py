@@ -33,7 +33,8 @@ class TestBase(unittest.TestCase):
     def test_create_instance_with_more_id_args(self):
         """Testing id property with more arguments"""
         with self.assertRaises(TypeError):
-            test_base = Base(2,4)
+            test_base = Base(2, 4)
+
 
 if __name__ == '__main__':
     unittest.main()
