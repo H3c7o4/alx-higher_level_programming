@@ -121,3 +121,24 @@ class Rectangle(Base):
         print('\n' * self.y, end='')
         for height in range(self.height):
             print(' ' * self.x + '#' * self.width)
+
+    def update(self, *args, **kwargs):
+        """assigns an argument to each attribute
+
+        Args:
+            args (list): attributes to be modified [id, width, height, x, y].
+            kwargs (dict): attributes to be modified.
+        """
+        if (args is not None) and (len(args) != 0):
+            arlist = ["id", "width", "height", "x", "y"]
+            for arl in range(len(args)):
+                if arl == 0:
+                    super().__init__(args[arl])
+                else:
+                    setattr(self, arlist[arl], args[arl])
+        else:
+            for key, value in kwargs.items():
+                if (key == 'id'):
+                    super().__init__(value)
+                else:
+                    setattr(self, key, value)
