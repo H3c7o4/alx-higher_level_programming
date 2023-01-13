@@ -28,7 +28,7 @@ class Square(Rectangle):
         """
         super().__init__(size, size, x, y, id)
 
-        def __str__(self):
-            """Overrides the default behaviour of the __str__ method."""
-            return "[Rectangle] ({}) {}/{} - {}".format(
-                self.id, self.x, self.y, self.size)
+    def __str__(self):
+        """Overrides the default behaviour of the __str__ method."""
+        return "[Rectangle] ({}) {}/{} - {}".format(
+            self.id, self.x, self.y, self.width)
