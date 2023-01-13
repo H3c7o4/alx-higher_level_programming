@@ -71,3 +71,8 @@ class Square(Rectangle):
                     super().update(value)
                 else:
                     setattr(self, key, value)
+
+    def to_dictionary(self):
+        """returns the dictionary representation of a Square"""
+        dico = {'id': self.id, 'x': self.x, 'size': self.width, 'y': self.y}
+        return dico
