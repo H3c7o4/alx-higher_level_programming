@@ -32,3 +32,22 @@ class Square(Rectangle):
         """Overrides the default behaviour of the __str__ method."""
         return "[Rectangle] ({}) {}/{} - {}".format(
             self.id, self.x, self.y, self.width)
+
+    # width attribute getter and setter
+    @property
+    def size(self):
+        """Retrieves the value of the size"""
+        return (self.width)
+
+    @size.setter
+    def size(self, value):
+        """Sets the necessary attributes for the square object.
+
+        Args:
+            size (int): the size of the square
+        Raises:
+              TypeError: if size is not given as an integer
+              ValueError: if size is less than 0.
+        """
+        self.width = value
+        self.height = value
