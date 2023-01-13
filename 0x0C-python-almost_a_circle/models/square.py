@@ -30,7 +30,7 @@ class Square(Rectangle):
 
     def __str__(self):
         """Overrides the default behaviour of the __str__ method."""
-        return "[Rectangle] ({}) {}/{} - {}".format(
+        return "[Square] ({}) {}/{} - {}".format(
             self.id, self.x, self.y, self.width)
 
     # width attribute getter and setter
@@ -51,3 +51,23 @@ class Square(Rectangle):
         """
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        """assigns an argument to each attribute
+        Args:
+            args (list): attributes to be modified [id, size, x, y].
+            kwargs (dict): attributes to be modified.
+        """
+        if args is not None and len(args) != 0:
+            arlist = ["id", "size", "x", "y"]
+            for arl in range(len(args)):
+                if arl == 0:
+                    super().update(args[arl])
+                elif arl < len(arlist):
+                    setattr(self, arlist[arl], args[arl])
+        else:
+            for key, value in kwargs.items():
+                if (key == 'id'):
+                    super().update(value)
+                else:
+                    setattr(self, key, value)

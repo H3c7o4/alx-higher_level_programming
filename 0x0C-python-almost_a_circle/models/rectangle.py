@@ -142,3 +142,9 @@ class Rectangle(Base):
                     super().__init__(value)
                 else:
                     setattr(self, key, value)
+
+    def to_dictionary(self):
+        """returns the dictionary representation of a Rectangle"""
+        dico = {'x': self.__x, 'y': self.__y,
+                'id': self.id, 'height': self.height, 'width': self.width}
+        return dico
