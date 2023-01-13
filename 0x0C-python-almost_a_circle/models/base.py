@@ -43,3 +43,14 @@ class Base:
                 new_dict = [item.to_dictionary() for item in list_objs]
                 json_string = cls.to_json_string(new_dict)
                 json.dump(json_string, f)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """eturns the list of the JSON string representation json_string.
+
+        Args:
+            json_string (string) : string representing a list of dictionaries
+        """
+        if json_string is None or json_string == "":
+            return []
+        return json.loads(json_string)
