@@ -4,4 +4,5 @@ After 3 months of C, you will start Python today. First projects are more "C-ori
 
 Enjoy !
 
+
  - Guillaume, CTO at Holberton.
