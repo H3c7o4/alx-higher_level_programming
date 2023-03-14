@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
-class Square extends require('./5-square.js') {
-  charprint (c) {
+module.exports = class Square extends require('./5-square.js') {
+  charPrint (c) {
     if (!c) {
       c = 'x';
     }
@@ -14,4 +14,4 @@ class Square extends require('./5-square.js') {
 
     console.log(charArray.join('\n'));
   }
-}
+};
