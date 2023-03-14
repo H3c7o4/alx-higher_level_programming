@@ -3,7 +3,7 @@
 module.exports = class Square extends require('./5-square.js') {
   charPrint (c) {
     if (!c) {
-      c = 'x';
+      c = 'X';
     }
 
     const charArray = [];
