@@ -11,4 +11,4 @@
  - What is a prototype
  - How to inherit an object from another
 
-By [Hector Steve ITOK](!https://github.com/H3c7o4)
+By [Hector Steve ITOK](https://github.com/H3c7o4)
