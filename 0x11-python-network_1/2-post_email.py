@@ -7,12 +7,13 @@ from urllib.request import Request, urlopen
 from urllib import parse
 from sys import argv
 
-url = argv[1]
-email = argv[2]
+if __name__ == '__main__':
+    url = argv[1]
+    email = argv[2]
 
-values = {'email': email}
-data = parse.urlencode(values)
-data = data.encode('utf-8')
-req = Request(url, data)
-with urlopen(req) as page:
-    print(page.read().decode('utf-8'))
+    values = {'email': email}
+    data = parse.urlencode(values)
+    data = data.encode('utf-8')
+    req = Request(url, data)
+    with urlopen(req) as page:
+        print(page.read().decode('utf-8'))
