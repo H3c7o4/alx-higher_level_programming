@@ -6,4 +6,12 @@ $(this).ready(function () {
       $('DIV#hello').text(data.hello);
     });
   });
+
+  $('INPUT#language_code').keyup(function (e) {
+    if (e.keyCode === 13) {
+      $.getJSON(url + $(this).val(), function (data) {
+        $('DIV#hello').text(data.hello);
+      });
+    }
+  });
 });
