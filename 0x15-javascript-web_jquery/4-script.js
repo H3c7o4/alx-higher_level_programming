@@ -1,3 +1,3 @@
 $('#toggle_header').on('click', function () {
-  if ($(this).hasClass('red')) { $(this).toggleClass('green'); } else { $(this).toggleClass('red'); }
+  if ($('header').hasClass('red')) { $(this).toggleClass('green'); } else { $(this).toggleClass('red'); }
 });
