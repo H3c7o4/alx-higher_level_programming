@@ -2,7 +2,7 @@
 
 ## General
 
- - Why Python programming is awesome
+ - Why Python programming is awesome ?
  - What is an object
  - What is the difference between a class and an object or instance
  - What is the difference between immutable object and mutable object
